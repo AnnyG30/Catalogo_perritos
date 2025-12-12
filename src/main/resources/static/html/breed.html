@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de perros</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: #fafafa;
+          margin: 0;
+          padding: 0;
+        }
+
+        .title {
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        #breed-gallery {
+          max-width: 1200px;
+          margin: 20px auto;
+        }
+
+        .grid-item {
+          margin-bottom: 10px;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+
+        .grid-item img {
+          width: 100%;
+          display: block;
+          border-radius: 10px;
+          transition: transform 0.3s;
+        }
+
+        .grid-item img:hover {
+          transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="title">
+    <h2 id="breed-title"></h2>
+    <p>Conoce a los perritos de esta raza 🐶</p>
+</div>
+
+<div id="breed-gallery" class="grid"></div>
+
+<!-- Masonry -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- imagesLoaded (recomendado para que no se rompa el layout antes de cargar las imágenes) -->
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<script src="../js/breed.js"></script>
+
+</body>
+</html>
